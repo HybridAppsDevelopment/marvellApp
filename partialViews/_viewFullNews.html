@@ -1,0 +1,87 @@
+<div data-hash="viewFullNews" class="swiper-slide">
+
+    <div class="section no-pad-bot">
+
+        <div class="row fullNewsRow">
+            <div class="col s12"  id="newsTitle">
+            </div>   
+        </div>        
+
+        <div class="row fullNewsRow">
+            <div class="col s12" id="newsImage">
+            </div>
+        </div>        
+
+        <div class="row fullNewsRow">
+            <div class="col s6" id="newsAuthor">
+            </div>
+            <div class="col s6" id="newsDateTime">
+            </div>
+        </div>
+
+        <div class="row fullNewsRow">
+            <div class="col s12" id="newsEditDelete">
+                <button id="deleteNews" class="deleteNews">delete</button>
+                <button id="_editNews" _itemid="">edit</button>
+            </div>
+        </div>  
+        
+        <div class="row fullNewsRow">
+            <div class="col s12"  id="newsFullText">
+            </div>
+        </div>    
+
+        <div class="row fullNewsRow">
+            <div class="col s12" id="commentTitle">
+                <p>Comments</p>
+            </div>
+            <div class="col s12"  id="writeComment">
+                <form><input type="text" id="comment" class="comment"><button class="addComment">add comment</button></form>
+            </div>
+        </div> 
+        
+        <div class="row fullNewsRow"  id="commentSection">
+        </div> 
+
+    </div>
+    <!--Close Steps Menu Group 3-->
+
+
+    <script>
+        //Need to put the Swiper into the dynamicaly generated content!
+        //initialize swiper SPA control for this content
+        var swiper = new Swiper('.swiper-container', {
+            // If we need pagination
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            spaceBetween: 0,
+
+
+            onInit: function(swiper) {
+
+              $('.progress').css({"visibility": "hidden"});
+              $('.progressWrapper').css({"visibility": "hidden"});
+
+            },
+
+
+
+
+            // Add one more handler for this event
+            onSlideChangeEnd: function(swiper) {
+
+
+            },
+
+            paginationBulletRender: function(index, className) {
+                //return '<span class="' + className + '">' + (index + 1) + '</span>';
+                return '<span class="' + className + '"></span>';
+            }
+        });
+        //swiper.update();
+        //Initial animation
+    </script>
+    <script src="js/getFullNews.js"></script>
+    <script>
+        getFullNews();
+    </script>

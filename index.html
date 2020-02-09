@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<!--SPA Application Shell XHR Version 30/1/17-->
+<html lang="en">
+
+<head>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <title>Marvel Info</title>
+
+    <!-- CSS-->
+    <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
+
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
+    <!--swiper integration-->
+    <link rel="stylesheet" href="css/swiper.min.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
+    <script src="js/jquery-2.1.1.min.js"></script>
+
+    <script src="js/swiper.jquery.min.js" async></script>
+
+    <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+
+    <script src="js/firebase.js"></script>
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16">
+    <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#cd070c">
+    <meta name="theme-color" content="#cd070c">
+    <meta name="msapplication-config" content="browserconfig.xml" />
+
+    
+
+</head>
+
+<body>
+
+    <!--top banner-->
+    <main>
+
+
+      <div class="center mainLogo"></div>
+        <div class="section no-pad-bot" id="index-banner">
+            <div class="container">
+
+                <nav class="white">
+                    <div class="nav-wrapper">
+
+                        <ul class="right hide-on-med-and-down">
+
+                        	<p class="red-text" id="currentUsername"></p>
+                            <li><a class="waves-effect waves-red _login" id="loginNav">Login</a></li>
+                            <li><a class="waves-effect waves-red _register" id="regNav">Register</a></li>
+                            <li><a class="waves-effect waves-red" id="logoutNav">Logout</a></li>
+
+                        </ul>
+
+                        <ul class="left hide-on-med-and-down">
+                            <li><a class="waves-effect waves-red _home">Home</a></li>
+                            <li><a class="waves-effect waves-red _allNews">News</a></li>
+                            <li><a class="waves-effect waves-red _allArticles">Articles</a></li>
+                            <li><a class="waves-effect waves-red _createNews" id="addNewsNav">Add News</a></li>
+                            <li><a class="waves-effect waves-red _createArticle" id="addArticleNav">Add Articles</a></li>
+                        </ul>
+
+                        <ul id="slide-out" class="side-nav">
+
+                            <li class="logo headerLogo2"></li>
+                            <p class="red-text" id="currentUsernameMob"></p>
+                            <li><a class="waves-effect waves-red _home">Home</a></li>
+                            <li><a class="waves-effect waves-red _login" id="loginMobNav">Login</a></li>
+                            <li><a class="waves-effect waves-red _register" id="regMobNav">Register</a></li>
+                            <li><a class="waves-effect waves-red" id="logoutMobNav">Logout</a></li>
+                            <li><a class="waves-effect waves-red _allNews">News</a></li>
+                            <li><a class="waves-effect waves-red _allArticles">Articles</a></li>
+                            <li><a class="waves-effect waves-red _createNews" id="addNewsMobNav">Add News</a></li>
+                            <li><a class="waves-effect waves-red _createArticle" id="addArticleMobNav">Add Articles</a></li>
+
+                        </ul>
+
+                        <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+                    </div>
+                </nav>
+
+                <h1 class="header center">&nbsp;</h1>
+
+            </div>
+        </div>
+
+    </main>
+
+
+
+    <!--card panel section-->
+    <section class="root card-panel card-panelTopHeader">
+
+
+    <a class="navBack waves-effect waves-light " style="visibility: visible;"><i style="font-size:40px" class="material-icons"></i><span>Back</span></a>
+
+
+
+      <!--displays progress bar to user whilst pages and data loads-->
+      <div class="progressWrapper">
+        <div class="progress">
+            <div class="indeterminate"></div>
+        </div>
+      </div>
+
+
+
+        <!-- Swiperslide controls for SPA -->
+        <div class="swiper-container">
+          <!--Partial Views Injected into contentRoot class-->
+            <div class="swiper-wrapper contentRoot">
+
+            </div>
+            <!--close swiper wrapper and contentRoot-->
+        </div>
+        <!--close swiper conatiner-->
+
+        <!--  Scripts - core and bespoke js that controls every aspect of the app-->
+
+
+        <script src="js/fastclick.js"></script>
+
+
+        <script src="js/materialize.min.js"></script>
+        <script src="js/masonry.pkgd.min.js"></script>
+        <script src="js/swiper.min.js"></script>
+
+        
+        <script src="js/changeAppPage.js"></script>
+
+
+
+        <script src="js/swipeFlash.js"></script>
+
+
+        <script src="js/jquery.browser.min.js"></script>
+
+        <script src="js/init.js"></script>
+
+       
+        <!--<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>-->
+
+        <!--variable store - gets around the need to store variables as window objects-->
+        <div class="itemidstore" _itemidstore=''></div>
+
+       
+
+</body>
+
+</html>

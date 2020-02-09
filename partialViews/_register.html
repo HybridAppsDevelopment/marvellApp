@@ -1,0 +1,104 @@
+<div data-hash="register" class="swiper-slide">
+
+
+    <div class="section no-pad-bot">
+
+
+        <h1 class="header center red-text">Register</h1>
+
+
+        <form id="loginForm" class="loginForm" enctype="multipart/form-data">
+
+            <div class="input-field col s12 m12 ">
+                <p class ="red-text">Username</p>
+                <input maxlength="100" placeholder="Choose a username" id="username" name="username" type="text" class="validate" tabindex="1"/>
+                <label for="username"></label>
+            </div>
+
+            <br>
+
+            <div class="input-field col s12 m12  ">
+                <p class ="red-text">First Name</p>
+                <input placeholder="Enter your first name" id="fname" name="firstName" type="text" class="validate" tabindex="2"/>
+                <label for="fname"></label>
+            </div>
+
+            <br>
+
+            <div class="input-field col s12 m12  ">
+                <p class ="red-text">Last Name</p>
+                <input placeholder="Enter your last name" id="lname" name="lastName" type="text" class="validate" tabindex="3"/>
+                <label for="lname"></label>
+            </div>
+
+            <br>
+
+            <div class="input-field col s12 m12 ">
+                <p class ="red-text">Email</p>
+                <input maxlength="100" placeholder="Enter Your email" id="email" name="email" type="text" class="validate" tabindex="4"/>
+                <label for="email"></label>
+            </div>
+
+            <br>
+
+            <div class="input-field col s12 m12 ">
+                <p class ="red-text">Password</p>
+                <input placeholder="Enter a password" id="password" name="password" type="password" class="validate" tabindex="5"/>
+                <label for="password"></label>
+            </div>
+
+            <a class="right waves-effect waves-red _alreadyAccount">Already have an account? Login here.</a>
+
+            <button class="btn-large waves-effect waves-red z-depth-3 waves-effect btn-flat" type="submit" name="groups" id="signUp">Register
+                <i class="mdi-content-send right"></i>
+            </button>
+
+            <span id="msg" class="red-text"></span>
+
+
+            <script src="js/firebaseRegister.js"></script>
+
+        </form>
+
+        <br><br>
+
+    </div>
+
+
+    <!--close root-->
+    </section>
+
+
+</div>
+<!--Close Steps Menu Group 3-->
+
+
+<script>
+    //Need to put the Swiper into the dynamicaly generated content!
+    //initialize swiper SPA control for this content
+    var swiper = new Swiper('.swiper-container', {
+        // If we need pagination
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        spaceBetween: 0,
+
+
+        onInit: function(swiper) {
+
+          $('.progress').css({"visibility": "hidden"});
+          $('.progressWrapper').css({"visibility": "hidden"});
+
+        },
+
+        // Add one more handler for this event
+        onSlideChangeEnd: function(swiper) {
+
+        },
+
+        paginationBulletRender: function(index, className) {
+            //return '<span class="' + className + '">' + (index + 1) + '</span>';
+            return '<span class="' + className + '"></span>';
+        }
+    });
+    //swiper.update();
+</script>

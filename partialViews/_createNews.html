@@ -1,0 +1,97 @@
+<div data-hash="createNews" class="swiper-slide">
+
+
+    <div class="section no-pad-bot">
+
+
+        <h1 class="header center red-text">Create News Article</h1>
+
+
+        <form id="createNews" class="createNews" enctype="multipart/form-data">
+
+            <div class="input-field col s12 m12 ">
+                <p class ="red-text">News article title</p>
+                <input maxlength="100" placeholder="A Title" id="title" name="title" type="text" class="validate" tabindex="1"/>
+                <label for="title"></label>
+            </div>
+
+            <br>
+
+            <div class="input-field col s12 m12  ">
+                <p class ="red-text">Short Text</p>
+                <textarea placeholder="Short Text, an overview of the news article/an abstract" maxlength="100" id="shortTxt" name="shortTxt" type="text" class="validate" tabindex="2"/>
+                <label for="short text"></label>
+            </div>
+
+            <br>
+
+            <div class="input-field col s12 m12  ">
+                <p class ="red-text">Full Content</p>
+                <textarea placeholder="The full text of the article" id="fullTxt" name="fullTxt" type="text" class="validate" tabindex="3"/>
+                <label for="full text"></label>
+            </div>
+
+            <div class="input-field col s12 m12  ">
+                <p class ="red-text">Thumbnail Image</p>
+                <input type="file" id="thumbImage" name="thumbImage" class="validate" tabindex="4" accept="image/*">
+                <label for="thumbImage"></label>
+            </div>
+
+            <div class="input-field col s12 m12  ">
+                <p class ="red-text">Full Image</p>
+                <input type="file" id="image" name="image" class="validate" tabindex="4" accept="image/*">
+                <label for="image"></label>
+            </div>
+
+            <button class="btn-large waves-effect waves-red z-depth-3 waves-effect btn-flat" type="submit" name="groups" id="create">Create
+                <i class="mdi-content-send right"></i>
+            </button>
+
+            <span id="msg" class="red-text"></span>
+
+            <script src="js/createNews.js"></script>
+
+        </form>
+
+        <br><br>
+
+    </div>
+
+
+    <!--close root-->
+    </section>
+
+
+</div>
+<!--Close Steps Menu Group 3-->
+
+
+<script>
+    //Need to put the Swiper into the dynamicaly generated content!
+    //initialize swiper SPA control for this content
+    var swiper = new Swiper('.swiper-container', {
+        // If we need pagination
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        spaceBetween: 0,
+
+
+        onInit: function(swiper) {
+
+          $('.progress').css({"visibility": "hidden"});
+          $('.progressWrapper').css({"visibility": "hidden"});
+
+        },
+
+        // Add one more handler for this event
+        onSlideChangeEnd: function(swiper) {
+
+        },
+
+        paginationBulletRender: function(index, className) {
+            //return '<span class="' + className + '">' + (index + 1) + '</span>';
+            return '<span class="' + className + '"></span>';
+        }
+    });
+    //swiper.update();
+</script>

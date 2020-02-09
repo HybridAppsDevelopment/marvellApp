@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget id="com.Marvel.example" version="1.1.4" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="https://phonegap.com/ns/1.0">
+	<name>MarvelInfo</name>
+	<description>
+		MarvelInfo Hybrid App Test - firebase test.
+	</description>
+
+	<author email="a.p.bingham@tees.ac.uk">
+	   Andrew Bingham
+	</author>
+
+	
+
+	<gap:plugin name="cordova-plugin-whitelist" source="npm" />
+<access origin="*" />
+<allow-navigation href="*" />
+<allow-intent href="*" />
+
+	<preference name="phonegap-version" value="cli-9.0.0" />
+
+	
+
+	
+</widget>

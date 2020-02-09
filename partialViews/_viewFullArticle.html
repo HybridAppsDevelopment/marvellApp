@@ -1,0 +1,71 @@
+<div data-hash="viewFullArticle" class="swiper-slide">
+
+    <div class="section no-pad-bot">
+
+
+        <div class="row fullArticleRow">
+            <div class="col s12"  id="articleTitle">
+            </div>   
+        </div>        
+        <div class="row fullArticleRow">
+            <div class="col s12" id="articleImage">
+            </div>
+        </div>      
+        <div class="row fullNewsRow">
+            <div class="col s12" id="newsEditDelete">
+                <button id="deleteArticle" class="deleteArticle">delete</button>
+                <button id="_editArticle" _itemid="">edit</button>
+            </div>
+        </div>  
+        <div class="row fullArticleRow">
+            <div class="col s12">
+            <div id="articleRating">
+            </div>
+            <div id="articleRated">
+            </div>
+            </div>
+        </div>        
+        <div class="row fullArticleRow">
+            <div class="col s12"  id="articleFullText">
+            </div>
+        </div>    
+    </div>
+
+    <script>
+        //Need to put the Swiper into the dynamicaly generated content!
+        //initialize swiper SPA control for this content
+        var swiper = new Swiper('.swiper-container', {
+            // If we need pagination
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            spaceBetween: 0,
+
+
+            onInit: function(swiper) {
+
+              $('.progress').css({"visibility": "hidden"});
+              $('.progressWrapper').css({"visibility": "hidden"});
+
+            },
+
+
+
+
+            // Add one more handler for this event
+            onSlideChangeEnd: function(swiper) {
+
+
+            },
+
+            paginationBulletRender: function(index, className) {
+                //return '<span class="' + className + '">' + (index + 1) + '</span>';
+                return '<span class="' + className + '"></span>';
+            }
+        });
+        //swiper.update();
+        //Initial animation
+    </script>
+    <script src="js/getFullArticle.js"></script>
+    <script>
+        getFullArticle();
+    </script>

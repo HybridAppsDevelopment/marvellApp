@@ -1,0 +1,21 @@
+{
+  "name": "Marvel Info",
+  "short_name": "Marvel Info",
+  "icons": [
+        {
+            "src": "img/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "img/android-chrome-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        }
+  ],
+  "start_url": "index.html",
+  "display": "fullscreen",
+  "background_color": "#CD070C",
+  "theme_color": "#CD070C",  
+  "orientation": "portrait"
+}

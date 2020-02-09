@@ -1,0 +1,60 @@
+<div data-hash="viewAllArticles" class="swiper-slide">
+
+    <div class="section no-pad-bot">
+
+       
+        <h1 class="center logoText red-text">Articles</h1>
+
+        <div class="row center">
+            <div class="col s12">
+
+                <div class="articles" id="articles"></div>
+
+            </div>
+
+            <br><br>
+
+        </div>
+
+    </div>
+</div>
+
+
+    <script>
+        //Need to put the Swiper into the dynamicaly generated content!
+        //initialize swiper SPA control for this content
+        var swiper = new Swiper('.swiper-container', {
+            // If we need pagination
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            spaceBetween: 0,
+
+
+            onInit: function(swiper) {
+
+              $('.progress').css({"visibility": "hidden"});
+              $('.progressWrapper').css({"visibility": "hidden"});
+
+            },
+
+
+
+
+            // Add one more handler for this event
+            onSlideChangeEnd: function(swiper) {
+
+
+            },
+
+            paginationBulletRender: function(index, className) {
+                //return '<span class="' + className + '">' + (index + 1) + '</span>';
+                return '<span class="' + className + '"></span>';
+            }
+        });
+        //swiper.update();
+        //Initial animation
+    </script>
+    <script src="js/getAllArticles.js"></script>
+    <script>
+        getAllArticles();
+    </script>

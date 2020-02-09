@@ -1,0 +1,68 @@
+<div data-hash="home" class="swiper-slide">
+
+  <div class="section no-pad-bot">
+
+    <div class="row center">
+      <div class="col s12">
+
+        <h1 class="center logoText red-text">Marvel</h1>
+
+
+        <h2 class="header center red-text">News</h2>
+        <div class="row homeWrap" id="news">
+
+        </div>
+
+        <h2 class="header center red-text">Recently Added Articles</h2>
+        <div class="row homeWrap" id="recentlyAdded">         
+
+        </div>
+        
+      </div>
+  </div>
+
+</div>
+
+<br><br>
+
+</div>
+ 
+<!--close root-->
+</section>
+
+</div>
+
+<script>
+//Need to put the Swiper into the dynamicaly generated content!
+//initialize swiper SPA control for this content
+var swiper = new Swiper('.swiper-container', {
+    // If we need pagination
+    pagination: '.swiper-pagination',
+    paginationClickable: true,
+    spaceBetween: 0,
+
+
+    onInit: function(swiper) {
+
+      $('.progress').css({
+        "visibility": "hidden"
+      });
+      $('.progressWrapper').css({
+        "visibility": "hidden"
+      });
+
+    },
+
+    // Add one more handler for this event
+    onSlideChangeEnd: function(swiper) {
+
+
+    },
+
+    paginationBulletRender: function(index, className) {
+        //return '<span class="' + className + '">' + (index + 1) + '</span>';
+        return '<span class="' + className + '"></span>';
+      }
+    });
+//swiper.update();
+</script>
